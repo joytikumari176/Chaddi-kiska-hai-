@@ -16,8 +16,8 @@ from telebot.types import ReplyKeyboardMarkup, KeyboardButton
 
 loop = asyncio.get_event_loop()
 
-TOKEN = '7087360500:AAHuS_LILqyF18sCyCTo9h81HVin_lmgGHo'
-MONGO_URI = 'mongodb+srv://t_a_b_r_e_z1:t_a_b_r_e_z@t_a_b_r_e_z.zbir7lx.mongodb.net/?retryWrites=true&w=majority'
+TOKEN = '7249682469:AAGl4yn8gdBg7RVs3zXBnHNKpoGalkdf5Xk'
+MONGO_URI = 'mongodb+srv://RUDRA_JAAT1:RUDRAJAAT@rudrajaat.zbir7lx.mongodb.net/?retryWrites=true&w=majority'
 FORWARD_CHANNEL_ID = -1002201545593
 CHANNEL_ID = -1002201545593
 error_channel_id = -1002201545593
@@ -25,7 +25,7 @@ error_channel_id = -1002201545593
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
 client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
-db = client['t_a_b_r_e_z']
+db = client['RUDRAJAAT']
 users_collection = db.users
 
 bot = telebot.TeleBot(TOKEN)
@@ -235,7 +235,7 @@ def handle_message(message):
         bot.reply_to(message, "*Instant++ Plan selected*", parse_mode='Markdown')
         attack_command(message)
     elif message.text == "Canary Download✔️":
-        bot.send_message(message.chat.id, "*Please use the following link for Canary Download: https://t.me/corex999/3*", parse_mode='Markdown')
+        bot.send_message(message.chat.id, "*Please use the following link for Canary Download: https://t.me/chaddi_chor_ddos/3*", parse_mode='Markdown')
     elif message.text == "My Account🏦":
         user_id = message.from_user.id
         user_data = users_collection.find_one({"user_id": user_id})
@@ -254,7 +254,7 @@ def handle_message(message):
     elif message.text == "Help❓":
         bot.reply_to(message, "*Help selected*", parse_mode='Markdown')
     elif message.text == "Contact admin✔️":
-        bot.reply_to(message, "*Contact admin @t_a_b_r_e_z*", parse_mode='Markdown')
+        bot.reply_to(message, "*Contact admin @chaddi_chor*", parse_mode='Markdown')
     else:
         bot.reply_to(message, "*Invalid option*", parse_mode='Markdown')
 
